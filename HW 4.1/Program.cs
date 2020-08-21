@@ -7,18 +7,17 @@ namespace HW_4._1
         static void Main(string[] args)
         {
             Console.WriteLine("Название первого человека:");
-            string name1 = Convert.ToString(Console.ReadLine());
+            string name1 = getName();
             Console.WriteLine("Возраст первого человека:");
-            int age1 = Convert.ToInt32(Console.ReadLine());
+            int age1 = getAge();
 
             Console.WriteLine("Название второго человека:");
-            string name2 = Convert.ToString(Console.ReadLine());
+            string name2 = getName();
             Console.WriteLine("Возраст второго человека:");
-            int age2 = Convert.ToInt32(Console.ReadLine());
+            int age2 = getAge();
 
             Console.WriteLine("Кто старше?");
             string elder = Convert.ToString(Console.ReadLine());
-
 
             while (age1 > age2)
             {
@@ -55,4 +54,17 @@ namespace HW_4._1
                 Console.WriteLine("Не правильно, они ровестники.");
             }
         }
+
+        static string getName()
+        {
+            string name = Convert.ToString(Console.ReadLine());
+            return name;
+        }
+
+        static int getAge()
+        {
+            int age = Convert.ToInt32(Console.ReadLine());
+            return age;
+        }
+    }
 }
